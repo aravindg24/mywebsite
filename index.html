@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio showcasing innovative AI projects including Road AI and Resolve AI">
-    <title>Aravind's Portfolio</title>
+    <meta name="description"
+        content="Aravind Gudikandula - Software Engineer specializing in AI, Computer Vision, and Full-Stack Development">
+    <meta name="keywords" content="Software Engineer, AI, Machine Learning, Computer Vision, Full-Stack Developer">
+    <meta name="author" content="Aravind Gudikandula">
+    <title>Aravind Gudikandula | Software Engineer & AI Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">Portfolio</div>
-            <ul class="nav-menu">
+            <div class="nav-brand">
+                <span class="brand-icon">{ AG }</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="Aravind_Gudikandula_Resume.pdf" download class="btn btn-nav">Download Resume</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to My Portfolio</h1>
-                <p class="hero-subtitle">Showcasing innovative AI solutions and projects</p>
-                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <div class="hero-badge">Software Engineer & AI Developer</div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Aravind Gudikandula</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Building intelligent solutions at the intersection of AI, Computer Vision, and Full-Stack
+                    Development
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10h12m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4+</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">15+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">2+</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -35,9 +85,104 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <span class="section-label">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
             <div class="about-content">
-                <p>I'm a passionate developer focused on creating innovative AI solutions that solve real-world problems. My work spans across machine learning, computer vision, and intelligent automation systems.</p>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate <strong>Software Engineer</strong> pursuing my Master's in Software Engineering
+                        at
+                        <strong>San Jose State University</strong>, with a strong foundation in AI, Machine Learning,
+                        and Full-Stack Development.
+                    </p>
+                    <p>
+                        My journey in technology is driven by a desire to create innovative solutions that solve
+                        real-world problems.
+                        I specialize in building intelligent systems using cutting-edge technologies like PyTorch,
+                        TensorFlow, and modern web frameworks.
+                    </p>
+                    <p>
+                        From developing advanced computer vision frameworks for smart vehicles to creating AI-powered
+                        repair assistants,
+                        I thrive on pushing the boundaries of what's possible with technology. My work combines
+                        technical excellence
+                        with practical problem-solving to deliver impactful results.
+                    </p>
+                    <div class="education-section">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <div>
+                                    <h4>Master of Science in Software Engineering</h4>
+                                    <p>San Jose State University</p>
+                                </div>
+                                <span class="education-date">Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <div>
+                                    <h4>Bachelor of Technology in Information Technology</h4>
+                                    <p>Malla Reddy College of Engineering and Technology</p>
+                                </div>
+                                <span class="education-date">Jun 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="experience-logo">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect width="48" height="48" rx="8" fill="url(#grad1)" />
+                            <path d="M24 12L36 18V30L24 36L12 30V18L24 12Z" stroke="white" stroke-width="2" />
+                            <defs>
+                                <linearGradient id="grad1" x1="0" y1="0" x2="48" y2="48">
+                                    <stop offset="0%" stop-color="#667eea" />
+                                    <stop offset="100%" stop-color="#764ba2" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>AWS Intern</h3>
+                                <p class="company">Hitachi Vantara</p>
+                            </div>
+                            <div class="experience-meta">
+                                <span class="location">Remote</span>
+                                <span class="duration">Mar 2023 - Jul 2023</span>
+                            </div>
+                        </div>
+                        <ul class="experience-highlights">
+                            <li>Developed innovative solutions using AWS services in collaboration with senior
+                                engineers, contributing to a <strong>20% reduction</strong> in project timelines for
+                                client deliverables</li>
+                            <li>Redesigned AWS training curriculum based on team feedback, ensuring alignment with
+                                current industry standards; implementation led to a notable <strong>20%
+                                    decrease</strong> in service-related incidents</li>
+                            <li>Conducted data analytics on cloud usage patterns, providing insights that led to a
+                                <strong>15% improvement</strong> in resource allocation and cost savings for customers
+                            </li>
+                            <li>Facilitated development of training materials on AWS services for internal teams,
+                                leading to a <strong>40% decrease</strong> in onboarding time for new employees</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -45,63 +190,298 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <span class="section-label">What I've Built</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
             <div class="projects-grid">
-                <!-- Road AI Project -->
-                <div class="project-card">
+                <!-- Project 1: Computer Vision Framework -->
+                <div class="project-card featured">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Road AI project icon">
-                                <title>Icon representing the Road AI project</title>
-                                <path d="M50 10L90 30V70L50 90L10 70V30L50 10Z" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="50" cy="50" r="15" fill="currentColor" opacity="0.3"/>
+                        <div class="project-gradient grad-purple"></div>
+                        <div class="project-icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="white" stroke-width="2" opacity="0.3" />
+                                <circle cx="32" cy="32" r="20" stroke="white" stroke-width="2" />
+                                <circle cx="32" cy="32" r="6" fill="white" />
+                                <path d="M32 12v8M32 44v8M12 32h8M44 32h8" stroke="white" stroke-width="2" />
                             </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Road AI</h3>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-badge">In Progress</span>
+                                <h3 class="project-title">Building Computer Vision Framework for Smart Vehicles</h3>
+                            </div>
+                            <span class="project-date">Jan 2025 - Dec 2025</span>
+                        </div>
                         <p class="project-description">
-                            An advanced AI system designed for road analysis and traffic management. 
-                            This project leverages computer vision and machine learning to detect road conditions, 
-                            identify traffic patterns, and provide real-time insights for safer and more efficient transportation.
+                            Architected a production-ready computer vision framework integrating Detection, Search, and
+                            Generative Insertion
+                            modules for AI-powered traffic scene modeling. Achieved exceptional performance metrics with
+                            PSNR of 32.44 dB
+                            (29% above target) and SSIM of 0.9226 (8.5% above target).
                         </p>
+                        <ul class="project-highlights">
+                            <li>Optimized ML pipeline achieving <strong>12-24x speedup</strong> (reduced processing from
+                                6 hours to 15 mins)</li>
+                            <li>Engineered hybrid detection system combining YOLOv8m with CLIP embeddings for semantic
+                                object search at <strong>22 FPS</strong></li>
+                            <li>Exceeded performance targets by <strong>29%</strong> (PSNR) and <strong>8.5%</strong>
+                                (SSIM)</li>
+                        </ul>
                         <div class="project-tags">
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Machine Learning</span>
                             <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">Stable Diffusion</span>
+                            <span class="tag">CLIP</span>
+                            <span class="tag">FAISS</span>
+                            <span class="tag">CUDA</span>
                         </div>
                         <div class="project-links">
-                            <!-- Project link will be added when the repository is publicly available -->
-                            <span class="project-link">Project coming soon</span>
+                            <a href="https://github.com/aravindg24/road-ai" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" />
+                                </svg>
+                                View Code
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Resolve AI Project -->
-                <div class="project-card">
+                <!-- Project 2: Resolve AI -->
+                <div class="project-card featured">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="20" y="20" width="60" height="60" rx="5" stroke="currentColor" stroke-width="2"/>
-                                <path d="M35 50L45 60L65 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <div class="project-gradient grad-blue"></div>
+                        <div class="project-icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <rect x="16" y="16" width="32" height="32" rx="4" stroke="white" stroke-width="2" />
+                                <path d="M26 32l6 6 10-12" stroke="white" stroke-width="2.5" stroke-linecap="round" />
                             </svg>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Resolve AI</h3>
+                        <div class="project-header">
+                            <div>
+                                <span class="project-badge">Deployed</span>
+                                <h3 class="project-title">Resolve AI – AI-Powered Visual Repair Assistant</h3>
+                            </div>
+                            <span class="project-date">Dec 2025</span>
+                        </div>
                         <p class="project-description">
-                            An intelligent problem-solving assistant powered by artificial intelligence. 
-                            Resolve AI uses natural language processing and advanced algorithms to understand 
-                            complex queries and provide accurate, context-aware solutions across various domains.
+                            Developed a full-stack AI diagnostic application using React 19, TypeScript, and Express.js,
+                            integrating Google Gemini
+                            2.5 Flash for multimodal image/video analysis. Features safety-first AI prompt system with
+                            90%+ structured response reliability.
                         </p>
+                        <ul class="project-highlights">
+                            <li>Engineered safety-first AI system detecting hazardous conditions with <strong>90%+
+                                    reliability</strong></li>
+                            <li>Implemented real-time media capture using WebRTC and MediaRecorder APIs</li>
+                            <li>Deployed to Google Cloud Run using multi-stage Docker builds with auto-scaling</li>
+                        </ul>
                         <div class="project-tags">
-                            <span class="tag">NLP</span>
-                            <span class="tag">AI Assistant</span>
-                            <span class="tag">Deep Learning</span>
+                            <span class="tag">React 19</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">Gemini 2.5</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Cloud Run</span>
+                            <span class="tag">Docker</span>
                         </div>
                         <div class="project-links">
-                            <span class="project-link">View Project</span>
+                            <a href="https://github.com/aravindg24" target="_blank" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" />
+                                </svg>
+                                View Code
+                            </a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Medical RAG System -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-gradient grad-green"></div>
+                        <div class="project-icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="20" r="6" stroke="white" stroke-width="2" />
+                                <path d="M32 26v12M26 32h12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                <path d="M20 44h24v8H20z" stroke="white" stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Medical Domain RAG System</h3>
+                            </div>
+                            <span class="project-date">May 2024</span>
+                        </div>
+                        <p class="project-description">
+                            Designed an open-source RAG system leveraging BioMistral (7B) and PubMedBERT for highly
+                            relevant medical embeddings.
+                            Engineered a private, cost-effective solution ensuring data privacy by deploying LLM
+                            functionalities locally.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">BioMistral</span>
+                            <span class="tag">Qdrant</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Llama.cpp</span>
+                            <span class="tag">PubMedBERT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Vehicle Insurance Detection -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-gradient grad-orange"></div>
+                        <div class="project-icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                <rect x="12" y="24" width="40" height="24" rx="2" stroke="white" stroke-width="2" />
+                                <circle cx="22" cy="48" r="4" stroke="white" stroke-width="2" />
+                                <circle cx="42" cy="48" r="4" stroke="white" stroke-width="2" />
+                                <path d="M16 24l4-8h24l4 8" stroke="white" stroke-width="2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Vehicle Insurance Damage Detection</h3>
+                            </div>
+                            <span class="project-date">May 2023</span>
+                        </div>
+                        <p class="project-description">
+                            Implemented an image classification model using CNNs & Keras to categorize vehicle damage
+                            with 88% accuracy.
+                            Attained a precision rate of 90% for damaged image classification, creating a novel dataset
+                            for vision-based detection.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Keras</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Technical Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 16l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Languages & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Ruby</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Rails</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" />
+                            <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2" />
+                            <circle cx="16" cy="16" r="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>AI, GenAI & Vision</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Gemini API</span>
+                        <span class="skill-tag">YOLOv8</span>
+                        <span class="skill-tag">Stable Diffusion</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M4 12h24M4 16h24M4 20h24" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <rect x="8" y="8" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3>Cloud, Data & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Flink</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4l-8 8 8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M24 12l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Certifications & Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS Cloud Practitioner</span>
+                        <span class="skill-tag">Google IT Automation</span>
+                        <span class="skill-tag">Agile/SDLC</span>
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Product Management</span>
+                        <span class="skill-tag">Problem Solving</span>
                     </div>
                 </div>
             </div>
@@ -111,12 +491,66 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
             <div class="contact-content">
-                <p>Interested in collaboration or have questions about my projects? Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:aravindg24@gmail.com" class="btn btn-secondary">Email Me</a>
-                    <a href="https://github.com/aravindg24" class="btn btn-secondary" target="_blank">GitHub</a>
+                <p class="contact-intro">
+                    I'm always open to discussing new projects, opportunities, or collaborations.
+                    Feel free to reach out!
+                </p>
+                <div class="contact-grid">
+                    <a href="mailto:aravindg@duck.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Email</h4>
+                            <p>aravindg@duck.com</p>
+                        </div>
+                    </a>
+                    <a href="tel:+16694998490" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Phone</h4>
+                            <p>+1 (669) 499-8490</p>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/aravind-gudikandula" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>LinkedIn</h4>
+                            <p>aravind-gudikandula</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/aravindg24" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>aravindg24</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -125,10 +559,27 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">{ AG }</span>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aravind Gudikandula. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

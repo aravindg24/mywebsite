@@ -1,56 +1,85 @@
-# My Portfolio Website
+# Aravind Gudikandula - Portfolio Website
 
-A professional portfolio website showcasing innovative AI projects including Road AI and Resolve AI.
+A modern, responsive portfolio website showcasing my projects, experience, and skills in Software Engineering, AI, and Full-Stack Development.
 
-## Features
+## 🌟 Features
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean and professional interface with smooth animations
-- **Project Showcase**: Detailed presentation of Road AI and Resolve AI projects
-- **GitHub Pages Ready**: Configured for easy deployment on GitHub Pages
+- **Modern Design**: Premium UI with gradient effects, smooth animations, and glassmorphism
+- **Fully Responsive**: Optimized for all devices (desktop, tablet, mobile)
+- **Resume Integration**: All information from my resume beautifully presented
+- **Smooth Animations**: Intersection Observer API for scroll-triggered animations
+- **Interactive Elements**: Hover effects, ripple animations, and dynamic backgrounds
+- **SEO Optimized**: Proper meta tags, semantic HTML, and descriptive content
 
-## Projects
+## 📋 Sections
 
-### Road AI
-An advanced AI system designed for road analysis and traffic management using computer vision and machine learning.
+1. **Hero Section**: Introduction with animated background and key statistics
+2. **About Section**: Background, education, and professional journey
+3. **Experience Section**: Professional work history at Hitachi Vantara
+4. **Projects Section**: Featured projects including:
+   - Building Computer Vision Framework for Smart Vehicles
+   - Resolve AI – AI-Powered Visual Repair Assistant
+   - Medical Domain RAG System
+   - Vehicle Insurance Damage Detection
+5. **Skills Section**: Comprehensive breakdown of technical skills:
+   - Languages & Frameworks
+   - AI, GenAI & Vision
+   - Cloud, Data & DevOps
+   - Certifications & Soft Skills
+6. **Contact Section**: Contact information and social media links
+7. **Footer**: Quick navigation and branding
 
-### Resolve AI
-An intelligent problem-solving assistant powered by AI, using NLP and deep learning algorithms.
+## 🛠️ Technologies Used
 
-## Viewing the Website
+- **HTML5**: Semantic markup with accessibility in mind
+- **CSS3**: Modern CSS with custom properties, Grid, Flexbox, and animations
+- **JavaScript (ES6+)**: Vanilla JS for smooth interactions and scroll effects
+- **Google Fonts**: Inter font family for clean, modern typography
 
-### Local Development
-Simply open `index.html` in your web browser to view the website locally.
-
-### GitHub Pages Deployment
-This website is configured to be deployed on GitHub Pages. To deploy:
-
-1. Go to your repository settings
-2. Navigate to the "Pages" section
-3. Under "Source", select the branch you want to deploy (e.g., `main` or `copilot/create-portfolio-website`)
-4. Select the root directory (`/`)
-5. Click "Save"
-
-Your website will be available at: `https://aravindg24.github.io/mywebsite/`
-
-## File Structure
+## 📂 File Structure
 
 ```
-.
-├── index.html      # Main HTML file
-├── style.css       # Styling and layout
-├── script.js       # Interactive features
-├── README.md       # This file
-└── .gitignore      # Git ignore rules
+mywebsite/
+├── index.html                          # Main HTML file
+├── style.css                           # Stylesheet with modern design system
+├── script.js                           # JavaScript for interactivity
+├── Aravind_Gudikandula_Resume.pdf     # Downloadable resume
+└── README.md                           # This file
 ```
 
-## Technologies Used
+## 🚀 Getting Started
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- SVG Graphics
+1. Clone or download this repository
+2. Open `index.html` in your web browser
+3. That's it! No build process or dependencies required
 
-## License
+## 🎨 Design System
 
-MIT License - feel free to use this template for your own portfolio!
+The website uses a carefully crafted design system:
+
+- **Color Palette**: Modern gradients with purple, blue, and accent colors
+- **Typography**: Inter font family with proper hierarchy
+- **Spacing**: Consistent spacing scale (0.5rem to 4rem)
+- **Shadows**: Multiple shadow levels for depth
+- **Animations**: Smooth transitions and scroll-triggered animations
+
+## 📱 Responsive Breakpoints
+
+- Desktop: 1024px and above
+- Tablet: 768px to 1023px
+- Mobile: Below 768px
+
+## 🔗 Live Links
+
+- **Email**: aravindg@duck.com
+- **Phone**: +1 (669) 499-8490
+- **LinkedIn**: [linkedin.com/in/aravind-gudikandula](https://linkedin.com/in/aravind-gudikandula)
+- **GitHub**: [github.com/aravindg24](https://github.com/aravindg24)
+
+## 📄 License
+
+© 2026 Aravind Gudikandula. All rights reserved.
+
+---
+
+**Built with ❤️ using modern web technologies**
