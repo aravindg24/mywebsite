@@ -49,11 +49,11 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
 
     if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 4px 12px rgba(0, 255, 136, 0.15)';
+        navbar.style.background = '#000000';
     } else {
         navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+        navbar.style.background = '#000000';
     }
 
     lastScroll = currentScroll;
