@@ -1,0 +1,46 @@
+name: Update Portfolio Projects Data
+
+on:
+  push:
+    branches:
+      - main
+  create:
+  public:
+  delete:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight
+  workflow_dispatch: # Enable manual execution
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch and process repository data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: node .github/scripts/fetch_repos.js
+
+      - name: Commit and push updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add projects.json featured.json
+          # Check if there are changes before committing
+          if git diff --staged --quiet; then
+            echo "No changes in repository metadata. Skipping commit."
+          else
+            git commit -m "Auto-update portfolio project metadata [skip ci]"
+            git push
+          fi

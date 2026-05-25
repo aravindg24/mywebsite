@@ -1,0 +1,52 @@
+[
+  {
+    "name": "mywebsite",
+    "description": "No description provided.",
+    "html_url": "https://github.com/aravindg24/mywebsite",
+    "homepage": "",
+    "language": "HTML",
+    "stars": 0,
+    "updated_at": "2026-05-25T08:08:53Z",
+    "topics": []
+  },
+  {
+    "name": "Job-Search-Engine",
+    "description": "Direct is an AI-powered semantic job search engine where you upload your resume once and find roles by fit, not keywords. It ranks matches, explains why you qualify, generates tailored pitches, tracks applications, and alerts you to new matches daily.",
+    "html_url": "https://github.com/aravindg24/Job-Search-Engine",
+    "homepage": "https://job-search-engine-eta.vercel.app",
+    "language": "JavaScript",
+    "stars": 0,
+    "updated_at": "2026-05-22T06:59:52Z",
+    "topics": []
+  },
+  {
+    "name": "aravindg24",
+    "description": "About me",
+    "html_url": "https://github.com/aravindg24/aravindg24",
+    "homepage": "",
+    "language": "Plain Text",
+    "stars": 0,
+    "updated_at": "2026-04-07T16:44:39Z",
+    "topics": []
+  },
+  {
+    "name": "Automated-Image-Processing",
+    "description": "No description provided.",
+    "html_url": "https://github.com/aravindg24/Automated-Image-Processing",
+    "homepage": "",
+    "language": "Python",
+    "stars": 0,
+    "updated_at": "2026-01-09T20:49:56Z",
+    "topics": []
+  },
+  {
+    "name": "resolve-ai",
+    "description": "🔧 AI repair assistant: Snap a photo of anything broken, get instant step-by-step fix instructions powered by Google Gemini.",
+    "html_url": "https://github.com/aravindg24/resolve-ai",
+    "homepage": "https://resolve-ai-service-960225205764.us-central1.run.app/",
+    "language": "TypeScript",
+    "stars": 0,
+    "updated_at": "2025-12-12T21:52:19Z",
+    "topics": []
+  }
+]
