@@ -178,8 +178,8 @@
                     <div class="hero-cta-group animate-fade-in-slow">
                         <a href="#projects" class="glow-button btn-primary" aria-label="Inspect portfolio visual products">
                             <span>Deploy Core Systems</span>
-                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                                <path d="M4 10H16M16 10L10 4M16 10L10 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="overflow: visible;">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
                         <a href="#about" class="glow-button btn-secondary" aria-label="Explore engineering background details">
@@ -261,86 +261,83 @@
                 </div>
                 
                 <div class="about-grid">
-                    <!-- Left: Bio details in futuristic terminals -->
-                    <div class="about-bio-column">
-                        <div class="glass-card terminal-card" role="region" aria-label="Terminal Biography">
-                            <div class="terminal-header">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                                <span class="terminal-title">aravind_bio.sh</span>
-                            </div>
-                            <div class="terminal-body font-mono">
-                                <p><span class="prompt">$</span> cat intro.txt</p>
-                                <p class="text-glow-green">Pursuing MS in Software Engineering at San Jose State University (Grad Dec 2025). Broadening the frontier where intelligent vision models integrate with production web infrastructures.</p>
-                                <p><span class="prompt">$</span> cat core_ideology.json</p>
-                                <p class="text-dim">"I build pipelines, not just endpoints. Whether tuning stable diffusion layers to insert dynamic road hazards at 22 FPS or training multimodal Gemini systems to detect high-voltage household hazards, I engineer for safety, low latency, and infinite scale."</p>
-                            </div>
+                    <!-- Column 1: Biography Terminal -->
+                    <div class="glass-card terminal-card tilt-element" role="region" aria-label="Terminal Biography">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title">aravind_bio.sh</span>
                         </div>
+                        <div class="terminal-body font-mono">
+                            <p><span class="prompt">$</span> cat intro.txt</p>
+                            <p class="text-glow-green">Pursuing MS in Software Engineering at San Jose State University (Grad Dec 2025). Broadening the frontier where intelligent vision models integrate with production web infrastructures.</p>
+                            <p><span class="prompt">$</span> cat core_ideology.json</p>
+                            <p class="text-dim">"I build pipelines, not just endpoints. Whether tuning stable diffusion layers to insert dynamic road hazards at 22 FPS or training multimodal Gemini systems to detect high-voltage household hazards, I engineer for safety, low latency, and infinite scale."</p>
+                        </div>
+                    </div>
 
-                        <div class="glass-card education-card">
-                            <h3 class="card-subheader font-mono"><span class="highlight-prefix">//</span> Academic Foundations</h3>
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-title">Master of Science in Software Engineering</div>
-                                    <div class="timeline-institution">San Jose State University | San Jose, CA</div>
-                                    <div class="timeline-date font-mono">Dec 2025</div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-title">Bachelor of Technology in Information Technology</div>
-                                    <div class="timeline-institution">Malla Reddy College of Engineering & Technology</div>
-                                    <div class="timeline-date font-mono">Jun 2023</div>
-                                </div>
+                    <!-- Column 2: Academic Foundations -->
+                    <div class="glass-card education-card tilt-element">
+                        <h3 class="card-subheader font-mono"><span class="highlight-prefix">//</span> Academic Foundations</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-title">Master of Science in Software Engineering</div>
+                                <div class="timeline-institution">San Jose State University | San Jose, CA</div>
+                                <div class="timeline-date font-mono">Dec 2025</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-title">Bachelor of Technology in Information Technology</div>
+                                <div class="timeline-institution">Malla Reddy College of Engineering & Technology</div>
+                                <div class="timeline-date font-mono">Jun 2023</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Live System Status Telemetry (WOW visual factor) -->
-                    <div class="about-status-column">
-                        <div class="glass-card status-card tilt-element">
-                            <h3 class="card-title font-mono"><span class="highlight-prefix">[System Status]</span> Operational Parameters</h3>
-                            <div class="status-gauge-container">
-                                <div class="status-gauge" aria-label="System status 98.7% operational">
-                                    <!-- Rotating radial neon loader -->
-                                    <svg viewBox="0 0 100 100" class="radial-svg">
-                                        <defs>
-                                            <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stop-color="var(--accent-blue)" />
-                                                <stop offset="100%" stop-color="var(--accent-purple)" />
-                                            </linearGradient>
-                                        </defs>
-                                        <circle cx="50" cy="50" r="40" class="gauge-back" />
-                                        <circle cx="50" cy="50" r="40" class="gauge-front stroke-gradient" />
-                                    </svg>
-                                    <div class="gauge-label font-mono">
-                                        <span class="gauge-value">98.7</span>
-                                        <span class="gauge-pct">%</span>
-                                    </div>
-                                    <span class="gauge-sub font-mono">ENGINE SPEED</span>
-                                </div>
-                                <div class="status-metrics">
-                                    <div class="metric-row font-mono">
-                                        <span class="metric-lbl">CORE TEMP:</span>
-                                        <span class="metric-val text-glow-blue">NORMAL (36°C)</span>
-                                    </div>
-                                    <div class="metric-row font-mono">
-                                        <span class="metric-lbl">AI RATIO:</span>
-                                        <span class="metric-val text-glow-purple">OPTIMAL (1:1)</span>
-                                    </div>
-                                    <div class="metric-row font-mono">
-                                        <span class="metric-lbl">LOAD RATE:</span>
-                                        <span class="metric-val">12.44 GB/s</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="status-graph" aria-hidden="true">
-                                <!-- Draw animated sine wave representing real-time CPU threads -->
-                                <svg class="wave-svg" viewBox="0 0 400 100">
-                                    <path class="wave-path" d="M0,50 Q50,20 100,50 T200,50 T300,50 T400,50" />
+                    <!-- Column 3: Live System Status Telemetry -->
+                    <div class="glass-card status-card tilt-element">
+                        <h3 class="card-title font-mono"><span class="highlight-prefix">[System Status]</span> Operational Parameters</h3>
+                        <div class="status-gauge-container">
+                            <div class="status-gauge" aria-label="System status 98.7% operational">
+                                <!-- Rotating radial neon loader -->
+                                <svg viewBox="0 0 100 100" class="radial-svg">
+                                    <defs>
+                                        <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="var(--accent-blue)" />
+                                            <stop offset="100%" stop-color="var(--accent-purple)" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="50" cy="50" r="40" class="gauge-back" />
+                                    <circle cx="50" cy="50" r="40" class="gauge-front stroke-gradient" />
                                 </svg>
+                                <div class="gauge-label font-mono">
+                                    <span class="gauge-value">98.7</span>
+                                    <span class="gauge-pct">%</span>
+                                </div>
+                                <span class="gauge-sub font-mono">ENGINE SPEED</span>
                             </div>
+                            <div class="status-metrics">
+                                <div class="metric-row font-mono">
+                                    <span class="metric-lbl">CORE TEMP:</span>
+                                    <span class="metric-val text-glow-blue">NORMAL (36°C)</span>
+                                </div>
+                                <div class="metric-row font-mono">
+                                    <span class="metric-lbl">AI RATIO:</span>
+                                    <span class="metric-val text-glow-purple">OPTIMAL (1:1)</span>
+                                </div>
+                                <div class="metric-row font-mono">
+                                    <span class="metric-lbl">LOAD RATE:</span>
+                                    <span class="metric-val">12.44 GB/s</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-graph" aria-hidden="true">
+                            <!-- Draw animated sine wave representing real-time CPU threads -->
+                            <svg class="wave-svg" viewBox="0 0 400 100">
+                                <path class="wave-path" d="M0,50 Q50,20 100,50 T200,50 T300,50 T400,50" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -532,8 +529,8 @@
                                 Re-architecting automated traffic scene models. Built multi-module engine containing object detection, embedding-based semantic retrieval, and generative diffusion layers. Exceeded target benchmarks with a PSNR of 32.44 dB and SSIM of 0.9226.
                             </p>
                             <ul class="project-bullets">
-                                <li>Optimized machine learning pipeline yielding <strong>12-24x speedups</strong> (processing shaved from 6 hrs to 15 mins).</li>
-                                <li>Linked YOLOv8m models with CLIP descriptions into a FAISS storage architecture for semantic searches running at <strong>22 FPS</strong>.</li>
+                                <li class="bullet">Optimized machine learning pipeline yielding <strong>12-24x speedups</strong> (processing shaved from 6 hrs to 15 mins).</li>
+                                <li class="bullet">Linked YOLOv8m models with CLIP descriptions into a FAISS storage architecture for semantic searches running at <strong>22 FPS</strong>.</li>
                             </ul>
                             <div class="project-footer">
                                 <div class="project-tech-tags">
@@ -568,8 +565,8 @@
                                 Constructed a safety-focused diagnostic assistant utilizing TypeScript, React 19, and Google Gemini 2.5 Flash for video/image anomaly alerts.
                             </p>
                             <ul class="project-bullets">
-                                <li>Achieved <strong>90%+ structured response reliability</strong> in critical hazardous fault alerts.</li>
-                                <li>Developed real-time video capture modules utilizing the WebRTC protocol.</li>
+                                <li class="bullet">Achieved <strong>90%+ structured response reliability</strong> in critical hazardous fault alerts.</li>
+                                <li class="bullet">Developed <strong>real-time video capture</strong> modules utilizing the <strong>WebRTC protocol</strong>.</li>
                             </ul>
                             <div class="project-footer">
                                 <div class="project-tech-tags">
@@ -604,7 +601,7 @@
                                 Engineered a cost-effective, private localized RAG architecture combining PubMedBERT embeddings, BioMistral LLM context generators, and Qdrant storage.
                             </p>
                             <ul class="project-bullets">
-                                <li>Maintained total patient data isolation by deploying model execution structures locally using Llama.cpp.</li>
+                                <li class="bullet">Maintained <strong>total patient data isolation</strong> by deploying model execution structures locally using <strong>Llama.cpp</strong>.</li>
                             </ul>
                             <div class="project-footer">
                                 <div class="project-tech-tags">
@@ -701,9 +698,9 @@
                         <div class="journey-content">
                             <p class="journey-intro">Optimized core enterprise microservices using Python and Java and integrated backend processes inside AWS clouds.</p>
                             <ul class="journey-bullets">
-                                <li>Engineered REST APIs via Flask/Spring Boot handling <strong>1M+ requests daily</strong> with <strong>99.9% uptime</strong>.</li>
-                                <li>Increased overall unit test coverage <strong>from 65% to 90%</strong> (JUnit/Pytest), reducing bug detection timelines by <strong>40%</strong>.</li>
-                                <li>Refined microservices interfaces to reduce system latencies by <strong>35%</strong>.</li>
+                                <li class="bullet">Engineered REST APIs via Flask/Spring Boot handling <strong>1M+ requests daily</strong> with <strong>99.9% uptime</strong>.</li>
+                                <li class="bullet">Increased overall unit test coverage <strong>from 65% to 90%</strong> (JUnit/Pytest), reducing bug detection timelines by <strong>40%</strong>.</li>
+                                <li class="bullet">Refined microservices interfaces to reduce system latencies by <strong>35%</strong>.</li>
                             </ul>
                         </div>
                     </article>
@@ -720,9 +717,9 @@
                         <div class="journey-content">
                             <p class="journey-intro">Architected resilient and highly-available cloud deployments for multiple client systems.</p>
                             <ul class="journey-bullets">
-                                <li>Configured automated deployment workflows using CloudFormation templates, dropping build durations by <strong>30%</strong>.</li>
-                                <li>Designed cloud architectures (EC2, Lambda, RDS) delivering <strong>99.8% availability</strong> across 5+ primary systems.</li>
-                                <li>Monitored resource allocation using CloudWatch, achieving a <strong>18% saving</strong> in monthly AWS expenditures.</li>
+                                <li class="bullet">Configured automated deployment workflows using CloudFormation templates, dropping build durations by <strong>30%</strong>.</li>
+                                <li class="bullet">Designed cloud architectures (EC2, Lambda, RDS) delivering <strong>99.8% availability</strong> across 5+ primary systems.</li>
+                                <li class="bullet">Monitored resource allocation using CloudWatch, achieving a <strong>18% saving</strong> in monthly AWS expenditures.</li>
                             </ul>
                         </div>
                     </article>

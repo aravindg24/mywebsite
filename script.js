@@ -354,10 +354,10 @@ const AppEngine = {
                 if (this.y < 0 || this.y > height) this.vy *= -1;
             }
 
-            draw() {
+            draw(isLight) {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(168, 85, 247, 0.15)';
+                ctx.fillStyle = isLight ? 'rgba(168, 85, 247, 0.35)' : 'rgba(168, 85, 247, 0.15)';
                 ctx.fill();
             }
         }
@@ -369,7 +369,7 @@ const AppEngine = {
         }
 
         // Draw connections logic
-        function connectParticles() {
+        function connectParticles(isLight) {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
@@ -380,7 +380,8 @@ const AppEngine = {
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(79, 123, 255, ${0.08 * (1 - dist / 100)})`;
+                        const opacityBase = isLight ? 0.18 : 0.08;
+                        ctx.strokeStyle = `rgba(79, 123, 255, ${opacityBase * (1 - dist / 100)})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
                     }
@@ -391,12 +392,15 @@ const AppEngine = {
         function animate() {
             ctx.clearRect(0, 0, width, height);
             
+            const isLight = document.body.classList.contains('light-mode') || 
+                            (!document.body.classList.contains('dark-mode') && window.matchMedia('(prefers-color-scheme: light)').matches);
+
             particles.forEach(p => {
                 p.update();
-                p.draw();
+                p.draw(isLight);
             });
 
-            connectParticles();
+            connectParticles(isLight);
             requestAnimationFrame(animate);
         }
 
@@ -540,6 +544,9 @@ const AppEngine = {
 
             rotatePoints();
 
+            const isLight = document.body.classList.contains('light-mode') || 
+                            (!document.body.classList.contains('dark-mode') && window.matchMedia('(prefers-color-scheme: light)').matches);
+
             // 1. Draw connecting neural pathways (synaptic lines)
             ctx.lineWidth = 1;
             for (let i = 0; i < nodes.length; i++) {
@@ -552,13 +559,13 @@ const AppEngine = {
 
                     // Connect adjacent points to form a beautiful sphere wireframe
                     if (dist3d < radius * 1.35) {
-                        const alpha = Math.min(nodes[i].alpha, nodes[j].alpha) * 0.12;
+                        const alpha = Math.min(nodes[i].alpha, nodes[j].alpha) * (isLight ? 0.22 : 0.12);
                         ctx.beginPath();
                         ctx.moveTo(nodes[i].x2d, nodes[i].y2d);
                         ctx.lineTo(nodes[j].x2d, nodes[j].y2d);
                         
                         // Fusing colors representing overlapping capabilities
-                        ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
+                        ctx.strokeStyle = isLight ? `rgba(79, 123, 255, ${alpha})` : `rgba(168, 85, 247, ${alpha})`;
                         ctx.stroke();
                     }
                 }
@@ -573,7 +580,7 @@ const AppEngine = {
                 // Draw glowing core node shadow
                 ctx.beginPath();
                 ctx.arc(node.x2d, node.y2d, nodeRadius * 2.5, 0, Math.PI * 2);
-                ctx.fillStyle = node.color + Math.floor(node.alpha * 50).toString(16).padStart(2, '0');
+                ctx.fillStyle = node.color + Math.floor(node.alpha * (isLight ? 60 : 50)).toString(16).padStart(2, '0');
                 ctx.fill();
 
                 // Draw solid node
@@ -584,7 +591,7 @@ const AppEngine = {
 
                 // Text labels
                 ctx.font = `bold ${Math.max(10, 12 * node.scale)}px 'Inter', sans-serif`;
-                ctx.fillStyle = `rgba(248, 249, 251, ${node.alpha * 0.95})`;
+                ctx.fillStyle = isLight ? `rgba(10, 10, 15, ${node.alpha * 0.95})` : `rgba(248, 249, 251, ${node.alpha * 0.95})`;
                 ctx.fillText(node.name, node.x2d + nodeRadius + 6, node.y2d + 4);
             });
 
