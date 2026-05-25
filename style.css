@@ -688,7 +688,7 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
     align-items: start;
 }
@@ -1331,7 +1331,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
     margin-top: var(--space-lg);
 }
@@ -1343,11 +1343,6 @@ section {
     text-align: left;
 }
 
-.project-card.featured-project {
-    grid-column: span 2;
-    flex-direction: row;
-}
-
 .project-header-panel {
     position: relative;
     width: 100%;
@@ -1356,11 +1351,6 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-.project-card.featured-project .project-header-panel {
-    width: 40%;
-    min-height: auto;
 }
 
 /* Neon backgrounds */
@@ -1412,9 +1402,7 @@ section {
     justify-content: space-between;
 }
 
-.project-card.featured-project .project-content-panel {
-    width: 60%;
-}
+/* Symmetrical project cards styling */
 
 .project-date {
     font-size: 0.75rem;
@@ -1901,15 +1889,7 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .project-card.featured-project {
-        grid-column: span 1;
-        flex-direction: column;
-    }
-    
-    .project-card.featured-project .project-header-panel,
-    .project-card.featured-project .project-content-panel {
-        width: 100%;
-    }
+    /* Projects grid is stacked symmetrically on smaller viewports */
     
     .telemetry-grid {
         grid-template-columns: 1fr;
