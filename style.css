@@ -2073,3 +2073,101 @@ section {
     0% { stroke-dashoffset: 0; }
     100% { stroke-dashoffset: -200; }
 }
+
+/* ==========================================================================
+   THEME SWITCH MANUAL OVERRIDES & STYLING
+   ========================================================================== */
+
+/* Theme Toggle Button Styling */
+.theme-toggle {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: var(--transition-spring);
+    box-shadow: var(--shadow-sm);
+    z-index: 1001;
+    outline: none;
+    pointer-events: auto;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-purple);
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+/* Toggle Sun/Moon icons depending on active theme class */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+/* Explicit class override for Light Mode Theme Toggle */
+body.light-mode .theme-toggle .sun-icon {
+    display: block;
+}
+
+body.light-mode .theme-toggle .moon-icon {
+    display: none;
+}
+
+/* Automatic preferences fallbacks if body has no specific override class */
+@media (prefers-color-scheme: light) {
+    body:not(.dark-mode) .theme-toggle .sun-icon {
+        display: block;
+    }
+    body:not(.dark-mode) .theme-toggle .moon-icon {
+        display: none;
+    }
+}
+
+/* Explicit manual Light Mode Override Variables */
+body.light-mode {
+    --bg-primary: #F8F9FB;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F1F3F7;
+    --border-color: rgba(10, 10, 15, 0.08);
+    --border-glow: rgba(79, 123, 255, 0.1);
+    
+    --text-primary: #0A0A0F;
+    --text-secondary: #4A4E5A;
+    --text-dim: #7E8494;
+    
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --shadow-card: 0 20px 45px rgba(10, 10, 15, 0.08);
+    
+    /* Adjust glows for light background contrast */
+    --shadow-bloom-blue: 0 8px 30px rgba(79, 123, 255, 0.18);
+    --shadow-bloom-purple: 0 8px 30px rgba(168, 85, 247, 0.18);
+    --shadow-bloom-pink: 0 8px 30px rgba(236, 72, 153, 0.18);
+}
+
+/* Ensure proper dark mode variable override if body is forced to dark mode */
+body.dark-mode {
+    --bg-primary: #0A0A0F;
+    --bg-secondary: #0F0F16;
+    --bg-tertiary: #13131F;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(79, 123, 255, 0.15);
+    
+    --text-primary: #F8F9FB;
+    --text-secondary: #B4B9C4;
+    --text-dim: #7A8190;
+    
+    --glass-bg: rgba(15, 15, 22, 0.7);
+    --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.3);
+    
+    --shadow-bloom-blue: 0 0 30px rgba(79, 123, 255, 0.35);
+    --shadow-bloom-purple: 0 0 30px rgba(168, 85, 247, 0.35);
+    --shadow-bloom-pink: 0 0 30px rgba(236, 72, 153, 0.35);
+}

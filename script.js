@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const AppEngine = {
     init() {
         this.checkReducedMotion();
+        this.initThemeToggle();
         this.initMobileMenu();
         this.initNavbarScroll();
         this.init3DTilt();
@@ -753,5 +754,37 @@ const AppEngine = {
                 console.log('Performance observers not fully supported in this context.', err);
             }
         }
+    },
+
+    // 9. Manual Theme Toggle Switcher
+    initThemeToggle() {
+        const toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Check if theme preference was previously saved
+        const storedTheme = localStorage.getItem('theme-preference');
+        if (storedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+        } else if (storedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+        }
+
+        toggle.addEventListener('click', () => {
+            const isLight = document.body.classList.contains('light-mode') || 
+                            (!document.body.classList.contains('dark-mode') && window.matchMedia('(prefers-color-scheme: light)').matches);
+            
+            if (isLight) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme-preference', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme-preference', 'light');
+            }
+            console.log('%c🌗 Theme Switcher: Theme updated manually.', 'color: #A855F7; font-weight: bold;');
+        });
     }
 };
