@@ -2080,54 +2080,95 @@ section {
 
 /* Theme Toggle Button Styling */
 .theme-toggle {
-    background: var(--glass-bg);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border-radius: var(--radius-round);
+    width: 64px;
+    height: 32px;
+    padding: 2px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--text-primary);
-    transition: var(--transition-spring);
-    box-shadow: var(--shadow-sm);
+    position: relative;
     z-index: 1001;
     outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-spring);
     pointer-events: auto;
+}
+
+/* Light mode capsule background */
+body.light-mode .theme-toggle {
+    background: rgba(10, 10, 15, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .theme-toggle:hover {
     border-color: var(--accent-purple);
-    transform: scale(1.1) rotate(15deg);
+    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
 }
 
-/* Toggle Sun/Moon icons depending on active theme class */
-.theme-toggle .sun-icon {
-    display: none;
+.toggle-track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 6px;
+    position: relative;
 }
 
-.theme-toggle .moon-icon {
-    display: block;
+.toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    transition: var(--transition-smooth);
+    z-index: 1;
 }
 
-/* Explicit class override for Light Mode Theme Toggle */
-body.light-mode .theme-toggle .sun-icon {
-    display: block;
+/* Active mode icon lighting up */
+body.light-mode .sun-icon-indicator {
+    color: #F59E0B; /* warm orange */
 }
 
-body.light-mode .theme-toggle .moon-icon {
-    display: none;
+body:not(.light-mode) .moon-icon-indicator {
+    color: #A855F7; /* neon purple */
 }
 
-/* Automatic preferences fallbacks if body has no specific override class */
+/* Sliding Knob styling */
+.toggle-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-spring);
+    z-index: 2;
+}
+
+/* Slide knob based on light mode active class */
+body.light-mode .toggle-knob {
+    transform: translateX(32px);
+    background: #0A0A0F;
+    box-shadow: 0 2px 6px rgba(10, 10, 15, 0.15);
+}
+
+/* System preferences auto fallbacks */
 @media (prefers-color-scheme: light) {
-    body:not(.dark-mode) .theme-toggle .sun-icon {
-        display: block;
+    body:not(.dark-mode) .toggle-knob {
+        transform: translateX(32px);
+        background: #0A0A0F;
     }
-    body:not(.dark-mode) .theme-toggle .moon-icon {
-        display: none;
+    body:not(.dark-mode) .sun-icon-indicator {
+        color: #F59E0B;
+    }
+    body:not(.dark-mode) .moon-icon-indicator {
+        color: var(--text-dim);
     }
 }
 
