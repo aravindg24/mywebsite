@@ -5,8 +5,9 @@
 :root {
     /* Fonts */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-mono: 'Courier New', Courier, monospace;
+    --font-mono: 'Space Mono', SFMono-Regular, Consolas, monospace;
 
     /* Spacing System */
     --space-xs: 0.5rem;
@@ -33,7 +34,7 @@
     --bg-secondary: #0F0F16;
     --bg-tertiary: #13131F;
     --border-color: rgba(255, 255, 255, 0.08);
-    --border-glow: rgba(79, 123, 255, 0.15);
+    --border-glow: rgba(255, 89, 0, 0.15); /* Orange hover glow */
     
     --text-primary: #F8F9FB;
     --text-secondary: #B4B9C4;
@@ -41,14 +42,16 @@
     
     /* Neon glow vectors */
     --accent-blue: #4F7BFF;
-    --accent-purple: #A855F7;
+    --accent-orange: #FF5900; /* Signature Action Orange */
+    --accent-purple: var(--accent-orange); /* Fallback alias */
     --accent-pink: #EC4899;
     --accent-teal: #14B8A6;
     --accent-green: #22C55E;
     
     /* Gradients */
-    --grad-blue-purple: linear-gradient(135deg, #4F7BFF 0%, #A855F7 100%);
-    --grad-pink-violet: linear-gradient(135deg, #EC4899 0%, #7C3AED 100%);
+    --grad-blue-orange: linear-gradient(135deg, #4F7BFF 0%, #FF5900 100%);
+    --grad-blue-purple: var(--grad-blue-orange); /* Fallback alias */
+    --grad-pink-violet: linear-gradient(135deg, #EC4899 0%, #FF5900 100%); /* Purple transitioned to orange */
     --grad-teal-blue: linear-gradient(135deg, #14B8A6 0%, #4F7BFF 100%);
     --grad-dark-mesh: radial-gradient(circle at 50% 50%, #13131F 0%, #0A0A0F 100%);
     
@@ -58,7 +61,8 @@
     
     /* Shadow Blooms */
     --shadow-bloom-blue: 0 0 30px rgba(79, 123, 255, 0.35);
-    --shadow-bloom-purple: 0 0 30px rgba(168, 85, 247, 0.35);
+    --shadow-bloom-orange: 0 0 30px rgba(255, 89, 0, 0.35);
+    --shadow-bloom-purple: var(--shadow-bloom-orange); /* Fallback alias */
     --shadow-bloom-pink: 0 0 30px rgba(236, 72, 153, 0.35);
     --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -73,7 +77,7 @@
         --bg-secondary: #FFFFFF;
         --bg-tertiary: #F1F3F7;
         --border-color: rgba(10, 10, 15, 0.08);
-        --border-glow: rgba(79, 123, 255, 0.1);
+        --border-glow: rgba(255, 89, 0, 0.1);
         
         --text-primary: #0A0A0F;
         --text-secondary: #4A4E5A;
@@ -84,7 +88,8 @@
         
         /* Adjust glows for light background contrast */
         --shadow-bloom-blue: 0 8px 30px rgba(79, 123, 255, 0.18);
-        --shadow-bloom-purple: 0 8px 30px rgba(168, 85, 247, 0.18);
+        --shadow-bloom-orange: 0 8px 30px rgba(255, 89, 0, 0.18);
+        --shadow-bloom-purple: var(--shadow-bloom-orange);
         --shadow-bloom-pink: 0 8px 30px rgba(236, 72, 153, 0.18);
     }
 }
@@ -336,23 +341,26 @@ header {
     transition: var(--transition-smooth);
 }
 
-/* Link active dot under text */
+/* Link active line under text - expanding left to right */
 .nav-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
-    left: 50%;
+    left: 0;
     width: 0;
-    height: 4px;
+    height: 3px;
     border-radius: var(--radius-round);
-    background: var(--accent-purple);
-    box-shadow: 0 0 8px var(--accent-purple);
-    transition: var(--transition-spring);
-    transform: translateX(-50%);
+    background: var(--accent-orange);
+    box-shadow: 0 0 8px var(--accent-orange);
+    transition: var(--transition-smooth);
 }
 
 .nav-link:hover {
     color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link.active {
@@ -361,7 +369,7 @@ header {
 }
 
 .nav-link.active::after {
-    width: 6px;
+    width: 100%;
 }
 
 .btn-nav {
@@ -529,11 +537,11 @@ body.light-mode .morphing-blob {
 
 /* Kinetic typography structure */
 .hero-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-weight: 900;
     font-size: clamp(2.5rem, 6vw, 4.8rem);
-    line-height: 1.1;
-    letter-spacing: -2px;
+    line-height: 1.15;
+    letter-spacing: -1px;
     color: var(--text-primary);
     margin-bottom: var(--space-md);
 }
@@ -685,11 +693,11 @@ section {
 }
 
 .section-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-weight: 800;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     color: var(--text-primary);
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 /* ==========================================================================
@@ -943,9 +951,14 @@ section {
     text-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
 }
 
+.text-glow-orange {
+    color: #FB923C;
+    text-shadow: 0 0 10px rgba(251, 146, 60, 0.2);
+}
+
 .text-glow-purple {
-    color: #C084FC;
-    text-shadow: 0 0 10px rgba(192, 132, 252, 0.2);
+    color: #FB923C;
+    text-shadow: 0 0 10px rgba(251, 146, 60, 0.2);
 }
 
 /* Oscilloscope Animated wave */
@@ -1058,10 +1071,11 @@ section {
     width: 100%;
 }
 
+.feature-card.active .feature-icon-wrapper.neon-orange-glow,
 .feature-card.active .feature-icon-wrapper.neon-purple-glow {
-    color: var(--accent-purple);
-    border-color: var(--accent-purple);
-    box-shadow: var(--shadow-bloom-purple);
+    color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    box-shadow: var(--shadow-bloom-orange);
 }
 
 .feature-card.active .feature-icon-wrapper.neon-blue-glow {
@@ -1419,10 +1433,10 @@ section {
     align-items: center;
     gap: 8px;
     padding: 0.4rem 0.85rem;
-    background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.25);
+    background: rgba(255, 89, 0, 0.1);
+    border: 1px solid rgba(255, 89, 0, 0.25);
     border-radius: var(--radius-round);
-    color: var(--accent-purple);
+    color: var(--accent-orange);
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 700;
@@ -1433,14 +1447,19 @@ section {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--accent-purple);
-    box-shadow: 0 0 10px var(--accent-purple);
-    animation: blinkPurple 1.5s infinite ease-in-out;
+    background-color: var(--accent-orange);
+    box-shadow: 0 0 10px var(--accent-orange);
+    animation: blinkOrange 1.5s infinite ease-in-out;
+}
+
+@keyframes blinkOrange {
+    0%, 100% { opacity: 0.4; box-shadow: 0 0 4px var(--accent-orange); }
+    50% { opacity: 1; box-shadow: 0 0 12px var(--accent-orange); }
 }
 
 @keyframes blinkPurple {
-    0%, 100% { opacity: 0.4; box-shadow: 0 0 4px var(--accent-purple); }
-    50% { opacity: 1; box-shadow: 0 0 12px var(--accent-purple); }
+    0%, 100% { opacity: 0.4; box-shadow: 0 0 4px var(--accent-orange); }
+    50% { opacity: 1; box-shadow: 0 0 12px var(--accent-orange); }
 }
 
 .featured-details-col {
@@ -1457,14 +1476,14 @@ section {
 }
 
 .featured-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-weight: 900;
     font-size: clamp(1.6rem, 4vw, 2.2rem);
-    background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-purple) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-orange) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 .featured-desc {
@@ -1652,8 +1671,9 @@ body.light-mode .languages-bar-track {
 }
 
 /* Neon backgrounds */
+.bg-gradient-orange,
 .bg-gradient-purple {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.85) 0%, rgba(124, 58, 237, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(255, 89, 0, 0.85) 0%, rgba(223, 111, 37, 0.95) 100%);
 }
 
 .bg-gradient-blue {
@@ -1704,12 +1724,12 @@ body.light-mode .languages-bar-track {
 
 .project-date {
     font-size: 0.75rem;
-    color: var(--accent-purple);
+    color: var(--accent-orange);
     font-weight: 700;
 }
 
 .project-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-serif);
     font-weight: 800;
     font-size: 1.45rem;
     color: var(--text-primary);
@@ -2042,10 +2062,11 @@ body.light-mode .languages-bar-track {
     transition: var(--transition-spring);
 }
 
+.contact-channel:hover .channel-icon.neon-orange-glow,
 .contact-channel:hover .channel-icon.neon-purple-glow {
-    color: var(--accent-purple);
-    border-color: var(--accent-purple);
-    box-shadow: var(--shadow-bloom-purple);
+    color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    box-shadow: var(--shadow-bloom-orange);
 }
 
 .contact-channel:hover .channel-icon.neon-blue-glow {

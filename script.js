@@ -147,7 +147,7 @@ const AppEngine = {
                 <div class="camera-grid">
                     <div class="grid-line horizontal"></div>
                     <div class="grid-line vertical"></div>
-                    <div class="scan-laser" style="background: linear-gradient(180deg, rgba(168, 85, 247, 0) 0%, var(--accent-purple) 50%, rgba(168, 85, 247, 0) 100%); box-shadow: 0 0 15px var(--accent-purple);"></div>
+                    <div class="scan-laser" style="background: linear-gradient(180deg, rgba(255, 89, 0, 0) 0%, var(--accent-orange) 50%, rgba(255, 89, 0, 0) 100%); box-shadow: 0 0 15px var(--accent-orange);"></div>
                     <div class="camera-stream active-yolo">
                         <svg class="simulation-vector" viewBox="0 0 300 200">
                             <rect class="mock-vehicle" x="60" y="60" width="180" height="80" rx="10" />
@@ -168,17 +168,17 @@ const AppEngine = {
                         <p class="diag-header">DETECTION LOG</p>
                         <p class="diag-log-row">> YOLOv8m loading parameters...</p>
                         <p class="diag-log-row">> Model weights validated.</p>
-                        <p class="diag-log-row text-glow-purple">> [CLIP] Embedding overlap at 0.912</p>
+                        <p class="diag-log-row text-glow-orange">> [CLIP] Embedding overlap at 0.912</p>
                     </div>
                     <div class="diag-col">
                         <p class="diag-header">TELEMETRY MATRIX</p>
                         <div class="matrix-meter-bar">
                             <span>PRECISION:</span>
-                            <div class="meter"><div class="fill" style="width: 90%; background: var(--accent-purple);"></div></div>
+                            <div class="meter"><div class="fill" style="width: 90%; background: var(--accent-orange);"></div></div>
                         </div>
                         <div class="matrix-meter-bar">
                             <span>INFERENCE:</span>
-                            <div class="meter"><div class="fill" style="width: 25%; background: var(--accent-purple);"></div></div>
+                            <div class="meter"><div class="fill" style="width: 25%; background: var(--accent-orange);"></div></div>
                         </div>
                     </div>
                 </div>
@@ -911,7 +911,7 @@ const AppEngine = {
                         <div class="featured-stats-grid">
                             <div class="featured-stat-box">
                                 <span class="featured-stat-label">COMMIT ACTIVITY (30D)</span>
-                                <span class="featured-stat-value font-mono text-glow-purple">${data.commit_count_30_days} pushes</span>
+                                <span class="featured-stat-value font-mono text-glow-orange">${data.commit_count_30_days} pushes</span>
                             </div>
                             <div class="featured-stat-box">
                                 <span class="featured-stat-label">LAST PUSH PROTOCOL</span>
@@ -957,7 +957,7 @@ const AppEngine = {
             projectsContainer.innerHTML = '';
 
             const gradients = [
-                'bg-gradient-purple',
+                'bg-gradient-orange',
                 'bg-gradient-blue',
                 'bg-gradient-green'
             ];
