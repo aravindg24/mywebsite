@@ -338,6 +338,7 @@ header {
     color: var(--text-secondary);
     text-decoration: none;
     position: relative;
+    display: inline-block;
     padding: 0.35rem 0.2rem;
     transition: var(--transition-smooth);
 }
