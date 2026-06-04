@@ -1,12 +1,12 @@
 [
   {
     "name": "mywebsite",
-    "description": "No description provided.",
+    "description": "A modern personal website showcasing my skills, projects, and experience across Software Engineering, AI/ML, and full‑stack development.",
     "html_url": "https://github.com/aravindg24/mywebsite",
-    "homepage": "",
-    "language": "CSS",
+    "homepage": "https://aravindg24.github.io/mywebsite/",
+    "language": "HTML",
     "stars": 0,
-    "updated_at": "2026-06-02T17:45:18Z",
+    "updated_at": "2026-06-04T01:03:06Z",
     "topics": []
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "name": "aravindg24",
-    "description": "About me",
+    "description": "A small intro to who am I and what i do.....",
     "html_url": "https://github.com/aravindg24/aravindg24",
     "homepage": "",
     "language": "Plain Text",
@@ -31,7 +31,7 @@
   },
   {
     "name": "Automated-Image-Processing",
-    "description": "No description provided.",
+    "description": "A Lab activity trying to learn AWS Services",
     "html_url": "https://github.com/aravindg24/Automated-Image-Processing",
     "homepage": "",
     "language": "Python",
