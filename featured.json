@@ -1,17 +1,21 @@
 {
-  "name": "mywebsite",
-  "description": "A modern personal website showcasing my skills, projects, and experience across Software Engineering, AI/ML, and full‑stack development.",
-  "html_url": "https://github.com/aravindg24/mywebsite",
-  "homepage": "https://aravindg24.github.io/mywebsite/",
-  "language": "HTML",
+  "name": "Job-Search-Engine",
+  "description": "Direct is an AI-powered semantic job search engine where you upload your resume once and find roles by fit, not keywords. It ranks matches, explains why you qualify, generates tailored pitches, tracks applications, and alerts you to new matches daily.",
+  "html_url": "https://github.com/aravindg24/Job-Search-Engine",
+  "homepage": "https://job-search-engine-eta.vercel.app",
+  "language": "JavaScript",
   "stars": 0,
-  "updated_at": "2026-06-09T02:56:32Z",
+  "updated_at": "2026-06-10T05:29:29Z",
   "topics": [],
   "languages_breakdown": {
-    "HTML": 40,
-    "CSS": 37.4,
-    "JavaScript": 22.6
+    "JavaScript": 50,
+    "Python": 35.2,
+    "HTML": 10.8,
+    "CSS": 2.3,
+    "PLpgSQL": 1.1,
+    "Shell": 0.3,
+    "Dockerfile": 0.2
   },
-  "commit_count_30_days": 42,
-  "readme_summary": "A modern, responsive portfolio website showcasing my projects, experience, and skills in Software Engineering, AI, and Full-Stack Development."
+  "commit_count_30_days": 2,
+  "readme_summary": "Live: https://job-search-engine-eta.vercel.app/ &nbsp;·&nbsp; Backend: Render &nbsp;·&nbsp; Auth: Supabase"
 }
