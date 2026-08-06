@@ -1,12 +1,22 @@
 [
   {
+    "name": "train-my-own-llm",
+    "description": "Tried creating my own llm which generates a pretty decentish poem's. ",
+    "html_url": "https://github.com/aravindg24/train-my-own-llm",
+    "homepage": "",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "updated_at": "2026-08-05T04:26:00Z",
+    "topics": []
+  },
+  {
     "name": "mywebsite",
     "description": "A modern personal website showcasing my skills, projects, and experience across Software Engineering, AI/ML, and full‑stack development.",
     "html_url": "https://github.com/aravindg24/mywebsite",
     "homepage": "https://aravindg24.github.io/mywebsite/",
     "language": "HTML",
     "stars": 0,
-    "updated_at": "2026-08-04T02:21:45Z",
+    "updated_at": "2026-08-05T02:21:50Z",
     "topics": []
   },
   {
