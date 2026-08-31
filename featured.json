@@ -3,15 +3,15 @@
   "description": "A modern personal website showcasing my skills, projects, and experience across Software Engineering, AI/ML, and full‑stack development.",
   "html_url": "https://github.com/aravindg24/mywebsite",
   "homepage": "https://aravindg24.github.io/mywebsite/",
-  "language": "HTML",
+  "language": "CSS",
   "stars": 0,
-  "updated_at": "2026-08-31T20:45:46Z",
+  "updated_at": "2026-08-31T21:09:46Z",
   "topics": [],
   "languages_breakdown": {
-    "HTML": 40,
-    "CSS": 37.4,
-    "JavaScript": 22.6
+    "CSS": 48.3,
+    "JavaScript": 29,
+    "HTML": 22.7
   },
-  "commit_count_30_days": 32,
+  "commit_count_30_days": 34,
   "readme_summary": "A modern, responsive portfolio website showcasing my projects, experience, and skills in Software Engineering, AI, and Full-Stack Development."
 }
