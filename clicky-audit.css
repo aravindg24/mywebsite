@@ -1,0 +1,65 @@
+/* Audited layout refinements for index-1.html only. */
+body{line-height:1.5}
+section[id]{scroll-margin-top:54px}
+a:focus-visible,summary:focus-visible{outline:3px solid #1676e5;outline-offset:4px;border-radius:4px}
+.wordmark,.top-cta,.desktop-nav a{min-height:44px;display:inline-flex;align-items:center}
+.wordmark{justify-self:start}
+.menu-status{grid-column:3}
+.desktop-nav{position:absolute;left:90px;margin-left:0}
+.mobile-nav{display:none}
+.project-links{align-items:center;flex-wrap:wrap;row-gap:4px}
+.project-links a{min-height:44px;display:inline-flex;align-items:center}
+.timeline-list a{min-height:44px;display:inline-flex;align-items:center}
+.contact-chaos{min-height:auto;padding:140px max(24px,8vw) 60px}
+.contact-window,.contact-window.reveal,.contact-window.reveal.visible{position:relative;left:auto;right:auto;bottom:auto;width:min(720px,72vw);margin:54px auto 0;transform:none}
+.contact-copy .aqua-button{width:auto;max-width:100%}
+footer>a{min-height:44px;display:inline-flex;align-items:center}
+.photo-a{width:260px;left:4%;top:410px}
+.photo-a>div{height:155px;padding:0;overflow:hidden;background:#111}
+.photo-a img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.photo-b{width:220px;right:4%;top:430px}
+.photo-b>div{height:135px;padding:0;overflow:hidden;background:#111;line-height:normal}
+.photo-b video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.road-comparison{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:10px;padding:10px;background:#202124;box-sizing:border-box}
+.road-compare-stage{position:relative;min-height:0;overflow:hidden;border:1px solid #777;border-radius:6px;background:#111}
+.road-compare-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;visibility:hidden;transition:opacity .22s ease}
+.road-compare-stage img.is-active{opacity:1;visibility:visible}
+.road-compare-label{position:absolute;z-index:2;left:10px;top:10px;padding:5px 8px;border:1px solid rgba(255,255,255,.75);border-radius:999px;background:rgba(15,15,15,.78);color:#fff;font:700 9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.road-compare-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.road-compare-controls button{min-height:42px;border:1px solid #777;border-radius:999px;background:#f7f4ef;color:#202124;font:700 11px var(--mono);cursor:pointer;box-shadow:inset 0 1px 0 #fff;transition:transform .15s ease,background .15s ease,color .15s ease}
+.road-compare-controls button:hover{transform:translateY(-1px)}
+.road-compare-controls button:focus-visible{outline:3px solid #1267db;outline-offset:2px}
+.road-compare-controls button.is-active{background:#111;color:#fff;border-color:#111}
+
+@media(max-width:900px){
+  .menu-status{grid-column:2}
+  .photo-a{width:190px;left:3%;top:610px}
+  .photo-a>div{height:112px}
+  .photo-b{width:170px;right:3%;top:610px}
+  .photo-b>div{height:102px}
+  .road-comparison{min-height:340px}
+  .mobile-nav{display:block;position:absolute;left:50%;top:5px;transform:translateX(-50%);z-index:3;font-size:12px}
+  .mobile-nav summary{min-width:58px;min-height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:700;list-style:none}
+  .mobile-nav summary::-webkit-details-marker{display:none}
+  .mobile-nav summary::after{content:'⌄';margin-left:5px;color:#777}
+  .mobile-nav[open] summary::after{content:'⌃'}
+  .mobile-nav nav{position:absolute;top:45px;left:50%;width:176px;transform:translateX(-50%);padding:7px;background:rgba(248,248,245,.98);border:1px solid #999;border-radius:9px;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+  .mobile-nav nav a{min-height:44px;display:flex;align-items:center;padding:0 13px;border-radius:6px}
+  .mobile-nav nav a:hover,.mobile-nav nav a:focus-visible{background:#d8f4ff}
+}
+
+@media(max-width:600px){
+  .hero-copy>p{line-height:1.5}
+  .section-intro h2{font-size:clamp(45px,13.8vw,54px)}
+  .project-copy h3{line-height:.95}
+  .project-links{gap:12px}
+  .contact-chaos{min-height:auto;padding:120px 16px 35px}
+  .contact-window,.contact-window.reveal,.contact-window.reveal.visible{position:relative;left:auto;right:auto;bottom:auto;width:100%;margin:54px auto 0;transform:none}
+  .contact-window>a{grid-template-columns:35px minmax(0,1fr) 16px}
+  .contact-window>a b{white-space:normal;overflow-wrap:anywhere}
+  footer{min-height:76px}
+  .road-comparison{min-height:220px;padding:8px;gap:8px}
+  .road-compare-controls button{min-height:40px}
+}
+
+@media(prefers-reduced-motion:reduce){.road-compare-stage img{transition:none}}
