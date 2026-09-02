@@ -1,5 +1,7 @@
 /* Audited layout refinements for index-1.html only. */
 body{line-height:1.5}
+/* Content must remain readable even when scroll animation scripts are delayed or blocked. */
+.reveal,.reveal.visible{opacity:1;transform:none}
 section[id]{scroll-margin-top:54px}
 a:focus-visible,summary:focus-visible{outline:3px solid #1676e5;outline-offset:4px;border-radius:4px}
 .wordmark,.top-cta,.desktop-nav a{min-height:44px;display:inline-flex;align-items:center}
