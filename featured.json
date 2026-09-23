@@ -5,13 +5,13 @@
   "homepage": "https://aravindg24.github.io/mywebsite/",
   "language": "CSS",
   "stars": 0,
-  "updated_at": "2026-09-23T16:53:30Z",
+  "updated_at": "2026-09-23T17:06:11Z",
   "topics": [],
   "languages_breakdown": {
-    "CSS": 48.4,
-    "JavaScript": 29,
+    "CSS": 48.5,
+    "JavaScript": 28.9,
     "HTML": 22.6
   },
-  "commit_count_30_days": 48,
+  "commit_count_30_days": 51,
   "readme_summary": "A modern, responsive portfolio website showcasing my projects, experience, and skills in Software Engineering, AI, and Full-Stack Development."
 }
